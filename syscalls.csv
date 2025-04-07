@@ -1,0 +1,336 @@
+Número,Nombre,Descripción
+0,read,Leer de un descriptor de archivo
+1,write,Escribir en un descriptor de archivo
+2,open,Abrir un archivo
+3,close,Cerrar un descriptor de archivo
+4,stat,Obtener estado de un archivo
+5,fstat,Obtener estado de un descriptor de archivo
+6,lstat,Obtener estado de un archivo sin seguir symlinks
+7,poll,Esperar eventos en un descriptor de archivo
+8,lseek,Reposicionar el offset de lectura/escritura
+9,mmap,Mapear archivos o dispositivos en memoria
+10,mprotect,Establecer protecciones en una región de memoria
+11,munmap,Desmapear una región de memoria
+12,brk,Modificar el tamaño del segmento de datos
+13,rt_sigaction,Instalar o modificar un manejador de señales
+14,rt_sigprocmask,Manipular la máscara de señales
+15,rt_sigreturn,Retorno de una llamada al manejador de señales
+16,ioctl,Controlar dispositivos
+17,pread64,Leer de un descriptor de archivo en una posición específica
+18,pwrite64,Escribir en un descriptor de archivo en una posición específica
+19,readv,Leer en buffers múltiples
+20,writev,Escribir desde buffers múltiples
+21,access,Comprobar permisos de acceso a un archivo
+22,pipe,Crear un pipe
+23,select,Monitorear descriptores para I/O
+24,sched_yield,Ceder el procesador
+25,mremap,Reasignar un área de memoria
+26,msync,Sincronizar un archivo con la memoria
+27,mincore,Determinar la residencia en memoria
+28,madvise,Dar consejos sobre el uso de memoria
+29,shmget,Obtener un segmento de memoria compartida System V
+30,shmat,Adjuntar un segmento de memoria compartida
+31,shmctl,Operar sobre un segmento de memoria compartida
+32,dup,Duplicar un descriptor de archivo
+33,dup2,Duplicar un descriptor a un número dado
+34,pause,Pausar hasta recibir una señal
+35,nanosleep,Dormir por un intervalo corto
+36,getitimer,Obtener el valor de un temporizador
+37,alarm,Configurar una alarma para señal
+38,setitimer,Establecer un temporizador
+39,getpid,Obtener el PID del proceso
+40,sendfile,Transferir datos entre descriptores
+41,socket,Crear un socket
+42,connect,Conectar un socket
+43,accept,Aceptar una conexión entrante
+44,sendto,Enviar datos a un socket
+45,recvfrom,Recibir datos de un socket
+46,sendmsg,Enviar un mensaje a través de un socket
+47,recvmsg,Recibir un mensaje desde un socket
+48,shutdown,Cerrar parcialmente un socket
+49,bind,Asociar una dirección a un socket
+50,listen,Poner un socket en modo escucha
+51,getsockname,Obtener la dirección de un socket
+52,getpeername,Obtener la dirección del par conectado
+53,socketpair,Crear un par de sockets conectados
+54,setsockopt,Configurar opciones de un socket
+55,getsockopt,Obtener opciones de un socket
+56,clone,Crear un proceso hijo (con flags de clonación)
+57,fork,Crear un proceso hijo (clonación simple)
+58,vfork,Crear un proceso hijo optimizado para execve
+59,execve,Ejecutar un programa
+60,exit,Terminar el proceso
+61,wait4,Esperar cambios en el estado de un proceso
+62,kill,Enviar una señal a un proceso
+63,uname,Obtener información del sistema
+64,semget,Obtener un conjunto de semáforos System V
+65,semop,Operar sobre un conjunto de semáforos
+66,semctl,Controlar un conjunto de semáforos
+67,shmdt,Separar un segmento de memoria compartida
+68,msgget,Obtener una cola de mensajes System V
+69,msgsnd,Enviar un mensaje a una cola System V
+70,msgrcv,Recibir un mensaje de una cola System V
+71,msgctl,Controlar una cola de mensajes System V
+72,fcntl,Operar sobre un descriptor de archivo
+73,flock,Aplicar o quitar un bloqueo sobre un archivo
+74,fsync,Sincronizar el contenido de un archivo
+75,fdatasync,Sincronizar los datos de un archivo (sin metadata)
+76,truncate,Acortar un archivo a un tamaño dado
+77,ftruncate,Acortar un archivo (por descriptor)
+78,getdents,Leer entradas de un directorio
+79,getcwd,Obtener el directorio de trabajo actual
+80,chdir,Cambiar el directorio de trabajo
+81,fchdir,Cambiar el directorio de trabajo (por descriptor)
+82,rename,Renombrar un archivo
+83,mkdir,Crear un directorio
+84,rmdir,Eliminar un directorio
+85,creat,Crear un archivo
+86,link,Crear un enlace físico
+87,unlink,Eliminar un archivo
+88,symlink,Crear un enlace simbólico
+89,readlink,Leer el destino de un enlace simbólico
+90,chmod,Cambiar los permisos de un archivo
+91,fchmod,Cambiar permisos (por descriptor)
+92,chown,Cambiar propietario de un archivo
+93,fchown,Cambiar propietario (por descriptor)
+94,lchown,Cambiar propietario de un enlace simbólico
+95,umask,Establecer la máscara de creación de archivos
+96,gettimeofday,Obtener la hora actual
+97,getrlimit,Obtener límites de recursos
+98,getrusage,Obtener uso de recursos del sistema
+99,sysinfo,Obtener información del sistema
+100,times,Obtener tiempos de proceso
+101,ptrace,Permitir a un proceso rastrear a otro
+102,getuid,Obtener el ID de usuario
+103,syslog,Registrar mensajes del sistema
+104,getgid,Obtener el ID de grupo
+105,setuid,Establecer el ID de usuario
+106,setgid,Establecer el ID de grupo
+107,geteuid,Obtener el ID de usuario efectivo
+108,getegid,Obtener el ID de grupo efectivo
+109,setpgid,Establecer el grupo de procesos
+110,getppid,Obtener el ID del proceso padre
+111,getpgrp,Obtener el grupo de procesos
+112,setsid,Crear una nueva sesión
+113,setreuid,Establecer el ID real y efectivo de usuario
+114,setregid,Establecer el ID real y efectivo de grupo
+115,getgroups,Obtener grupos suplementarios
+116,setgroups,Establecer grupos suplementarios
+117,setresuid,Establecer el ID real efectivo y guardado de usuario
+118,getresuid,Obtener el ID real efectivo y guardado de usuario
+119,setresgid,Establecer el ID real efectivo y guardado de grupo
+120,getresgid,Obtener el ID real efectivo y guardado de grupo
+121,getpgid,Obtener el grupo de procesos para un proceso
+122,setfsuid,Establecer el ID de usuario para el sistema de archivos
+123,setfsgid,Establecer el ID de grupo para el sistema de archivos
+124,getsid,Obtener el ID de sesión
+125,capget,Obtener capacidades de un proceso
+126,capset,Establecer capacidades de un proceso
+127,rt_sigpending,Examinar señales pendientes
+128,rt_sigtimedwait,Esperar una señal con tiempo límite
+129,rt_sigqueueinfo,Enviar una señal con información adicional
+130,rt_sigsuspend,Suspenderse hasta recibir una señal
+131,sigaltstack,Establecer o consultar la pila de señales
+132,utime,Actualizar los tiempos de acceso y modificación de un archivo
+133,mknod,Crear un nodo del sistema de archivos (archivo dispositivo o FIFO)
+134,uselib,Cargar una biblioteca compartida (obsoleto)
+135,personality,Establecer el dominio de ejecución del proceso
+136,ustat,Obtener estadísticas del sistema de archivos (obsoleto)
+137,statfs,Obtener estadísticas de un sistema de archivos
+138,fstatfs,Obtener estadísticas de un sistema de archivos (por descriptor)
+139,sysfs,Consultar o modificar parámetros del sistema
+140,getpriority,Obtener la prioridad de planificación
+141,setpriority,Establecer la prioridad de planificación
+142,sched_setparam,Establecer parámetros de planificación
+143,sched_getparam,Obtener parámetros de planificación
+144,sched_setscheduler,Establecer la política de planificación
+145,sched_getscheduler,Obtener la política de planificación
+146,sched_get_priority_max,Obtener la prioridad máxima de una política
+147,sched_get_priority_min,Obtener la prioridad mínima de una política
+148,sched_rr_get_interval,Obtener el intervalo de tiempo en round-robin
+149,mlock,Bloquear memoria
+150,munlock,Desbloquear memoria
+151,mlockall,Bloquear toda la memoria
+152,munlockall,Desbloquear toda la memoria
+153,vhangup,Forzar un hangup virtual
+154,modify_ldt,Modificar la tabla local de descriptores
+155,pivot_root,Cambiar el directorio raíz
+156,_sysctl,Control del sistema (obsoleto)
+157,prctl,Control de procesos
+158,arch_prctl,Ajustes específicos de la arquitectura
+159,adjtimex,Ajustar el reloj modificando parámetros del kernel
+160,setrlimit,Establecer límites de recursos
+161,chroot,Cambiar el directorio raíz
+162,sync,Sincronizar buffers del sistema de archivos
+163,acct,Activar o desactivar la contabilidad del proceso
+164,settimeofday,Establecer la hora del sistema
+165,mount,Montar un sistema de archivos
+166,umount2,Desmontar un sistema de archivos
+167,swapon,Activar swap en un dispositivo
+168,swapoff,Desactivar swap en un dispositivo
+169,reboot,Reiniciar el sistema
+170,sethostname,Establecer el nombre del host
+171,setdomainname,Establecer el dominio NIS
+172,iopl,Establecer el nivel de privilegio de I/O
+173,ioperm,Establecer permisos de I/O de puertos
+174,create_module,Crear un módulo del kernel (obsoleto)
+175,init_module,Cargar un módulo del kernel
+176,delete_module,Descargar un módulo del kernel
+177,get_kernel_syms,Obtener la tabla de símbolos del kernel (obsoleto)
+178,query_module,Consultar un módulo del kernel (obsoleto)
+179,quotactl,Manipular cuotas de disco
+180,nfsservctl,Control del servidor NFS
+181,getpmsg,Recibir un mensaje (obsoleto)
+182,putpmsg,Enviar un mensaje (obsoleto)
+183,afs_syscall,Llamada al sistema AFS (obsoleto)
+184,tuxcall,Llamada Tux (obsoleto)
+185,security,Llamada de seguridad (obsoleto)
+186,gettid,Obtener el ID del hilo
+187,readahead,Leer anticipadamente datos de un archivo
+188,setxattr,Establecer un atributo extendido
+189,lsetxattr,Establecer un atributo extendido sin seguir symlinks
+190,fsetxattr,Establecer un atributo extendido (por descriptor)
+191,getxattr,Obtener un atributo extendido
+192,lgetxattr,Obtener un atributo extendido sin seguir symlinks
+193,fgetxattr,Obtener un atributo extendido (por descriptor)
+194,listxattr,Listar atributos extendidos
+195,llistxattr,Listar atributos extendidos sin seguir symlinks
+196,flistxattr,Listar atributos extendidos (por descriptor)
+197,removexattr,Eliminar un atributo extendido
+198,lremovexattr,Eliminar un atributo extendido sin seguir symlinks
+199,fremovexattr,Eliminar un atributo extendido (por descriptor)
+200,tkill,Enviar una señal a un hilo específico
+201,time,Obtener la hora del sistema
+202,futex,Mutex en espacio de usuario rápido
+203,sched_setaffinity,Establecer afinidad de CPU para un proceso
+204,sched_getaffinity,Obtener afinidad de CPU para un proceso
+205,set_thread_area,Establecer almacenamiento local del hilo
+206,io_setup,Inicializar contexto de I/O asíncrono
+207,io_destroy,Destruir contexto de I/O asíncrono
+208,io_getevents,Obtener eventos de I/O asíncrono
+209,io_submit,Enviar solicitudes de I/O asíncrono
+210,io_cancel,Cancelar solicitudes de I/O asíncrono
+211,get_thread_area,Obtener almacenamiento local del hilo (obsoleto)
+212,lookup_dcookie,Buscar d-cookie
+213,epoll_create,Crear una instancia de epoll
+214,epoll_ctl_old,Controlar epoll (obsoleto)
+215,epoll_wait_old,Esperar eventos en epoll (obsoleto)
+216,remap_file_pages,Re-mapear páginas de un archivo
+217,getdents64,Leer entradas de directorio (64-bit)
+218,set_tid_address,Establecer puntero al ID del hilo
+219,restart_syscall,Reiniciar una syscall interrumpida
+220,semtimedop,Operar semáforos con tiempo límite
+221,fadvise64,Dar consejo sobre acceso a archivos
+222,timer_create,Crear un temporizador por proceso
+223,timer_settime,Establecer el tiempo de un temporizador
+224,timer_gettime,Obtener el tiempo restante de un temporizador
+225,timer_getoverrun,Obtener el recuento de sobrepaso de un temporizador
+226,timer_delete,Eliminar un temporizador
+227,clock_settime,Establecer la hora del reloj del sistema
+228,clock_gettime,Obtener la hora del reloj del sistema
+229,clock_getres,Obtener la resolución de un reloj
+230,clock_nanosleep,Dormir con precisión nanosegundo
+231,exit_group,Terminar todos los hilos de un proceso
+232,epoll_wait,Esperar eventos en una instancia de epoll
+233,epoll_ctl,Controlar una instancia de epoll
+234,tgkill,Enviar señal a un hilo específico de un grupo
+235,utimes,Establecer tiempos de acceso y modificación
+236,vserver,Llamada a vserver (obsoleto)
+237,mbind,Asignar política de memoria NUMA a un rango
+238,set_mempolicy,Establecer la política de memoria NUMA
+239,get_mempolicy,Obtener la política de memoria NUMA
+240,mq_open,Abrir una cola de mensajes POSIX
+241,mq_unlink,Eliminar una cola de mensajes POSIX
+242,mq_timedsend,Enviar mensaje a una cola POSIX con timeout
+243,mq_timedreceive,Recibir mensaje de una cola POSIX con timeout
+244,mq_notify,Registrar notificación en una cola POSIX
+245,mq_getsetattr,Obtener/establecer atributos de una cola POSIX
+246,kexec_load,Cargar un nuevo kernel para kexec
+247,waitid,Esperar cambios en procesos (con más opciones)
+248,add_key,Agregar una clave al keyring del kernel
+249,request_key,Solicitar una clave al keyring del kernel
+250,keyctl,Operar sobre claves en el keyring del kernel
+251,ioprio_set,Establecer la clase y prioridad de I/O
+252,ioprio_get,Obtener la clase y prioridad de I/O
+253,inotify_init,Inicializar una instancia de inotify
+254,inotify_add_watch,Agregar un watch a inotify
+255,inotify_rm_watch,Remover un watch de inotify
+256,migrate_pages,Migrar páginas de memoria de un proceso
+257,openat,Abrir un archivo relativo a un descriptor de directorio
+258,mkdirat,Crear un directorio relativo a un descriptor de directorio
+259,mknodat,Crear un nodo del sistema de archivos relativo a un descriptor
+260,fchownat,Cambiar propietario relativo a un descriptor de directorio
+261,futimesat,Cambiar tiempos relativo a un descriptor de directorio
+262,newfstatat,Obtener estado de un archivo relativo a un descriptor
+263,unlinkat,Eliminar una entrada relativa a un descriptor de directorio
+264,renameat,Renombrar un archivo relativo a un descriptor de directorio
+265,linkat,Crear un enlace relativo a un descriptor de directorio
+266,symlinkat,Crear un enlace simbólico relativo a un descriptor de directorio
+267,readlinkat,Leer el destino de un enlace relativo a un descriptor de directorio
+268,fchmodat,Cambiar permisos relativo a un descriptor de directorio
+269,faccessat,Comprobar permisos relativo a un descriptor de directorio
+270,pselect6,Esperar eventos en descriptores con máscara de señales
+271,ppoll,Esperar eventos en descriptores con timeout
+272,unshare,Desasociar partes del contexto de ejecución
+273,set_robust_list,Establecer la lista robusta de futexes
+274,get_robust_list,Obtener la lista robusta de futexes
+275,splice,Transferir datos entre descriptores sin copiar al espacio de usuario
+276,tee,Duplicar datos de un pipe a otro
+277,sync_file_range,Sincronizar un rango de un archivo
+278,vmsplice,Splice de o hacia un pipe
+279,move_pages,Mover páginas de memoria de un proceso
+280,utimensat,Actualizar timestamps relativo a un descriptor de directorio
+281,epoll_pwait,Esperar eventos en epoll con máscara de señales
+282,signalfd,Crear un descriptor de archivo para señales
+283,timerfd_create,Crear un descriptor de temporizador
+284,eventfd,Crear un descriptor para eventos
+285,fallocate,Manipular espacio en un archivo
+286,timerfd_settime,Configurar el temporizador de un descriptor
+287,timerfd_gettime,Obtener el temporizador de un descriptor
+288,signalfd4,Crear descriptor para señales con flags
+289,eventfd2,Crear descriptor para eventos con flags
+290,epoll_create1,Crear una instancia de epoll con flags
+291,dup3,Duplicar descriptor con flags
+292,pipe2,Crear un pipe con flags
+293,inotify_init1,Inicializar inotify con flags
+294,preadv,Leer de múltiples buffers con offset
+295,pwritev,Escribir a múltiples buffers con offset
+296,rt_tgsigqueueinfo,Enviar señal a un hilo específico con siginfo
+297,perf_event_open,Abrir un contador de rendimiento
+298,recvmmsg,Recibir múltiples mensajes en un socket
+299,fanotify_init,Inicializar fanotify
+300,fanotify_mark,Marcar objeto para fanotify
+301,prlimit64,Establecer u obtener límites de recursos para un proceso
+302,name_to_handle_at,Obtener un handle de archivo a partir de un pathname
+303,open_by_handle_at,Abrir un archivo a partir de un handle
+304,clock_adjtime,Ajustar el reloj del sistema
+305,syncfs,Sincronizar un sistema de archivos
+306,sendmmsg,Enviar múltiples mensajes en un socket
+307,setns,Reasociar el hilo a un namespace
+308,getcpu,Obtener la CPU y nodo NUMA en que se ejecuta el hilo
+309,process_vm_readv,Leer memoria de otro proceso
+310,process_vm_writev,Escribir en la memoria de otro proceso
+311,kcmp,Comparar recursos entre procesos
+312,finit_module,Cargar un módulo del kernel desde un descriptor
+313,sched_setattr,Establecer atributos de planificación de un hilo
+314,sched_getattr,Obtener atributos de planificación de un hilo
+315,renameat2,Renombrar un archivo con flags (relativo a descriptor)
+316,seccomp,Instalar un filtro seccomp
+317,getrandom,Obtener bytes aleatorios desde el kernel
+318,memfd_create,Crear un archivo anónimo y obtener descriptor
+319,kexec_file_load,Cargar un kernel para kexec a partir de un descriptor
+320,bpf,Operar sobre objetos BPF
+321,execveat,Ejecutar un programa relativo a un descriptor de directorio
+322,userfaultfd,Crear un descriptor para manejo de fallos de página en espacio de usuario
+323,membarrier,Ejecutar barrera de memoria a nivel de proceso
+324,mlock2,Bloquear memoria con flags
+325,copy_file_range,Copiar datos entre descriptores evitando copia a espacio de usuario
+326,preadv2,Leer múltiples buffers con flags
+327,pwritev2,Escribir múltiples buffers con flags
+328,pkey_mprotect,Establecer protección de memoria usando una key
+329,pkey_alloc,Asignar una protection key
+330,pkey_free,Liberar una protection key
+331,statx,Obtener información extendida de un archivo
+332,io_pgetevents,Obtener eventos asíncronos de I/O con polling
+333,rseq,Secuencias reiniciables
+334,pidfd_send_signal,Enviar señal a un proceso mediante un file descriptor
